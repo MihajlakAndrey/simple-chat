@@ -5,7 +5,7 @@ import { URL } from '.'
 import styles from './App.module.scss'
 
 const Form = ({ onJoin }) => {
-  console.log(process.env.REACT_APP_API_URL)
+
   const [roomId, setRoomId] = useState(``)
   const [userName, setName] = useState(``)
 
