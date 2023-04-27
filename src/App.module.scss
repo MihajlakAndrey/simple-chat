@@ -1,0 +1,180 @@
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .Form_block {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    input {
+      margin-bottom: 10px;
+      padding: 0px 7px;
+      border-radius: 3px;
+      height: 50px;
+      font-size: 30px;
+      color: rgb(55, 55, 55);
+    }
+    button {
+      border-radius: 3px;
+      width: 100%;
+      height: 40px;
+      border: none;
+      background-color: rgb(30, 144, 255);
+      font-size: 20px;
+      color: white;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .Room_block {
+    border: 1px solid rgba(55, 55, 55, 0.3);
+    display: flex;
+    width: 1100px;
+    height: 90vh;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .Info_block {
+      background-color: aliceblue;
+      min-width: 300px;
+
+      h3 {
+        padding-left: 10px;
+        padding-bottom: 10px;
+      }
+
+      .User_list {
+        max-height: 100px;
+        overflow-y: auto;
+        ul {
+          list-style: none;
+          margin: 0px 20px;
+
+          li {
+            border-radius: 3px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: start;
+            background-color: white;
+
+            &::before {
+              content: '';
+              display: inline-block;
+              background-color: rgba(255, 0, 0, 0.8);
+              width: 13px;
+              height: 13px;
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .Chat {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+      overflow-y: auto;
+
+      @media (max-width: 700px) {
+        padding: 5px;
+      }
+
+      .Message_list {
+        overflow-y: auto;
+        .MyMessage {
+          display: flex;
+          border-radius: 5px;
+          padding: 10px 0;
+          justify-content: end;
+          .text {
+            margin: 0px 10px;
+            padding: 0px 10px;
+            background-color: #cfe2f8;
+            font-size: 25px;
+            border-radius: 10px 0px 10px 10px;
+          }
+        }
+
+        .Message {
+          display: flex;
+          border-radius: 5px;
+          padding: 10px 0;
+          justify-content: start;
+          .text {
+            margin: 0px 10px;
+            padding: 0px 10px;
+            background-color: #ecebeb;
+            font-size: 25px;
+            border-radius: 0px 10px 10px 10px;
+          }
+        }
+        .userName {
+          text-decoration: underline;
+          font-weight: bold;
+          padding: 0px 5px;
+          text-align: end;
+        }
+      }
+      .MessageForm {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        border-top: 1px solid #ccc;
+
+        input {
+          width: 100%;
+          height: 70px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 20px;
+          background-color: #f8f8f8;
+          font-size: 25px;
+          resize: none;
+        }
+        .Send_button {
+          display: block;
+          border-radius: 3px;
+          width: 180px;
+          height: 40px;
+          border: none;
+          background-color: rgb(30, 144, 255);
+          font-size: 20px;
+          color: white;
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+        .Quit_button {
+          display: block;
+          border-radius: 3px;
+          width: 80px;
+          height: 40px;
+          border: none;
+          background-color: rgb(255, 38, 30);
+          font-size: 20px;
+          color: white;
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
